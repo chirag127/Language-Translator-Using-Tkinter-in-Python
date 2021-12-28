@@ -1,13 +1,54 @@
-from tkinter import *
-from translate import Translator
+import pyttsx3
 
+# required engine for text to speech
+
+engine = pyttsx3.init("sapi5")
+
+# sapi5 is the default voice engine of windows and it is installed by default in windows
+
+# getproperties is used to get the properties of the engine like rate, volume, pitch, etc.
+
+voices = engine.getProperty("voices")
+
+
+# setproperties is used to set the properties of the engine like rate, volume, pitch, etc.
+
+
+engine.setProperty("voice", voices[1].id)
+
+
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+# wish according to the time
+def wish():
+    import datetime
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        speak("Good Morning")
+    elif hour>=12 and hour<18:
+        speak("Good Afternoon")
+    else:
+        speak("Good Evening")
+
+
+wish()
 # Translator function
 
+speak("Welcome to the translator software")
+
+# # end further execution if run as a standalone program
+# exit()
+
+from translate import Translator
 
 def translate():
     translator = Translator(from_lang=lan1.get(), to_lang=lan2.get())
     translation = translator.translate(var.get())
     var1.set(translation)
+
+from tkinter import *
 
 
 # Tkinter chiragsinghalwindow Window with title
@@ -315,6 +356,7 @@ choices = {
     "Yiddish",
     "Zulu",
 }
+
 # default selection for dropdownlists
 lan1.set("English")
 lan2.set("Hindi")
