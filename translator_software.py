@@ -25,21 +25,312 @@ mainframe.pack(pady=100, padx=100)
 lan1 = StringVar(chiragsinghalwindow)
 lan2 = StringVar(chiragsinghalwindow)
 
+
+# supported languages are Afrikaans
+# Albanian
+# Amharic
+# Arabic
+# Armenian
+# Azerbaijani
+# Bajan
+# Balkan Gipsy
+# Basque
+# Bemba
+# Bengali
+# Bielarus
+# Bislama
+# Bosnian
+# Breton
+# Bulgarian
+# Burmese
+# Catalan
+# Cebuano
+# Chamorro
+# Chinese (Simplified)
+# Chinese Traditional
+# Comorian (Ngazidja)
+# Coptic
+# Creole English (Antigua and Barbuda)
+# Creole English (Bahamas)
+# Creole English (Grenadian)
+# Creole English (Guyanese)
+# Creole English (Jamaican)
+# Creole English (Vincentian)
+# Creole English (Virgin Islands)
+# Creole French (Haitian)
+# Creole French (Saint Lucian)
+# Creole French (Seselwa)
+# Creole Portuguese (Upper Guinea)
+# Croatian
+# Czech
+# Danish
+# Dutch
+# Dzongkha
+# English
+# Esperanto
+# Estonian
+# Fanagalo
+# Faroese
+# Finnish
+# French
+# Galician
+# Georgian
+# German
+# Greek
+# Greek (Classical)
+# Gujarati
+# Hausa
+# Hawaiian
+# Hebrew
+# Hindi
+# Hungarian
+# Icelandic
+# Indonesian
+# Inuktitut (Greenlandic)
+# Irish Gaelic
+# Italian
+# Japanese
+# Javanese
+# Kabuverdianu
+# Kabylian
+# Kannada
+# Kazakh
+# Khmer
+# Kinyarwanda
+# Kirundi
+# Korean
+# Kurdish
+# Kurdish Sorani
+# Kyrgyz
+# Lao
+# Latin
+# Latvian
+# Lithuanian
+# Luxembourgish
+# Macedonian
+# Malagasy
+# Malay
+# Maldivian
+# Maltese
+# Manx Gaelic
+# Maori
+# Marshallese
+# Mende
+# Mongolian
+# Morisyen
+# Nepali
+# Niuean
+# Norwegian
+# Nyanja
+# Pakistani
+# Palauan
+# Panjabi
+# Papiamentu
+# Pashto
+# Persian
+# Pijin
+# Polish
+# Portuguese
+# Potawatomi
+# Quechua
+# Romanian
+# Russian
+# Samoan
+# Sango
+# Scots Gaelic
+# Serbian
+# Shona
+# Sinhala
+# Slovak
+# Slovenian
+# Somali
+# Sotho, Southern
+# Spanish
+# Sranan Tongo
+# Swahili
+# Swedish
+# Swiss German
+# Syriac (Aramaic)
+# Tagalog
+# Tajik
+# Tamashek (Tuareg)
+# Tamil
+# Telugu
+# Tetum
+# Thai
+# Tibetan
+# Tigrinya
+# Tok Pisin
+# Tokelauan
+# Tongan
+# Tswana
+# Turkish
+# Turkmen
+# Tuvaluan
+# Ukrainian
+# Uma
+# Uzbek
+# Vietnamese
+# Wallisian
+# Welsh
+# Wolof
+# Xhosa
+# Yiddish
+# Zulu
+
 # choices to show in dropdown menu
 choices = {
-    "English",
-    "Hindi",
-    "Gujarati",
-    "Spanish",
-    "German",
-    "French",
-    "Italian",
-    "Portuguese",
-    "Russian",
-    "Japanese",
-    "Korean",
-    "Chinese",
+    "Afrikaans",
+    "Albanian",
+    "Amharic",
     "Arabic",
+    "Armenian",
+    "Azerbaijani",
+    "Bajan",
+    "Balkan Gipsy",
+    "Basque",
+    "Bemba",
+    "Bengali",
+    "Bielarus",
+    "Bislama",
+    "Bosnian",
+    "Breton",
+    "Bulgarian",
+    "Burmese",
+    "Catalan",
+    "Cebuano",
+    "Chamorro",
+    "Chinese (Simplified)",
+    "Chinese Traditional",
+    "Comorian (Ngazidja)",
+    "Coptic",
+    "Creole English (Antigua and Barbuda)",
+    "Creole English (Bahamas)",
+    "Creole English (Grenadian)",
+    "Creole English (Guyanese)",
+    "Creole English (Jamaican)",
+    "Creole English (Vincentian)",
+    "Creole English (Virgin Islands)",
+    "Creole French (Haitian)",
+    "Creole French (Saint Lucian)",
+    "Creole French (Seselwa)",
+    "Creole Portuguese (Upper Guinea)",
+    "Croatian",
+    "Czech",
+    "Danish",
+    "Dutch",
+    "Dzongkha",
+    "English",
+    "Esperanto",
+    "Estonian",
+    "Fanagalo",
+    "Faroese",
+    "Finnish",
+    "French",
+    "Galician",
+    "Georgian",
+    "German",
+    "Greek",
+    "Greek (Classical)",
+    "Gujarati",
+    "Hausa",
+    "Hawaiian",
+    "Hebrew",
+    "Hindi",
+    "Hungarian",
+    "Icelandic",
+    "Indonesian",
+    "Inuktitut (Greenlandic)",
+    "Irish Gaelic",
+    "Italian",
+    "Japanese",
+    "Javanese",
+    "Kabuverdianu",
+    "Kabylian",
+    "Kannada",
+    "Kazakh",
+    "Khmer",
+    "Kinyarwanda",
+    "Kirundi",
+    "Korean",
+    "Kurdish",
+    "Kurdish Sorani",
+    "Kyrgyz",
+    "Lao",
+    "Latin",
+    "Latvian",
+    "Lithuanian",
+    "Luxembourgish",
+    "Macedonian",
+    "Malagasy",
+    "Malay",
+    "Maldivian",
+    "Maltese",
+    "Manx Gaelic",
+    "Maori",
+    "Marshallese",
+    "Mende",
+    "Mongolian",
+    "Morisyen",
+    "Nepali",
+    "Niuean",
+    "Norwegian",
+    "Nyanja",
+    "Pakistani",
+    "Palauan",
+    "Panjabi",
+    "Papiamentu",
+    "Pashto",
+    "Persian",
+    "Pijin",
+    "Polish",
+    "Portuguese",
+    "Potawatomi",
+    "Quechua",
+    "Romanian",
+    "Russian",
+    "Samoan",
+    "Sango",
+    "Scots Gaelic",
+    "Serbian",
+    "Shona",
+    "Sinhala",
+    "Slovak",
+    "Slovenian",
+    "Somali",
+    "Sotho, Southern",
+    "Spanish",
+    "Sranan Tongo",
+    "Swahili",
+    "Swedish",
+    "Swiss German",
+    "Syriac (Aramaic)",
+    "Tagalog",
+    "Tajik",
+    "Tamashek (Tuareg)",
+    "Tamil",
+    "Telugu",
+    "Tetum",
+    "Thai",
+    "Tibetan",
+    "Tigrinya",
+    "Tok Pisin",
+    "Tokelauan",
+    "Tongan",
+    "Tswana",
+    "Turkish",
+    "Turkmen",
+    "Tuvaluan",
+    "Ukrainian",
+    "Uma",
+    "Uzbek",
+    "Vietnamese",
+    "Wallisian",
+    "Welsh",
+    "Wolof",
+    "Xhosa",
+    "Yiddish",
+    "Zulu",
 }
 # default selection for dropdownlists
 lan1.set("English")
