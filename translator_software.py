@@ -36,8 +36,6 @@ def wish():
 wish()
 # Translator function
 
-speak("Welcome to the translator software")
-
 # # end further execution if run as a standalone program
 # exit()
 
@@ -53,7 +51,7 @@ from tkinter import *
 
 # Tkinter chiragsinghalwindow Window with title
 chiragsinghalwindow = Tk()
-chiragsinghalwindow.title("Translator App created by mayank kaushik and harsh rai")
+chiragsinghalwindow.title("Translator App by Chirag Singhal")
 
 # Creating a Frame and Grid to hold the Content
 mainframe = Frame(chiragsinghalwindow)
@@ -363,11 +361,11 @@ lan2.set("Hindi")
 
 # creating dropdown and arranging in the grid
 lan1menu = OptionMenu(mainframe, lan1, *choices)
-Label(mainframe, text="Select a language").grid(row=0, column=1)
+Label(mainframe, text="From Language").grid(row=0, column=1)
 lan1menu.grid(row=1, column=1)
 
 lan2menu = OptionMenu(mainframe, lan2, *choices)
-Label(mainframe, text="Select a language").grid(row=0, column=2)
+Label(mainframe, text="To Language").grid(row=0, column=2)
 lan2menu.grid(row=1, column=2)
 
 # Text Box to take user input
@@ -385,5 +383,11 @@ textbox = Entry(mainframe, textvariable=var1).grid(row=2, column=3)
 b = Button(mainframe, text="Translate", command=translate).grid(
     row=3, column=1, columnspan=3
 )
+speak("Welcome to the translator software")
+speak("Enter the text you want to translate in the text box named Enter text")
+speak("Enter the language you want to translate from in the drop down menu named From language")
+speak("Enter the language you want to translate to in the drop down menu named To language")
 
 chiragsinghalwindow.mainloop()
+
+
