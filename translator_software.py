@@ -383,10 +383,7 @@ textbox = Entry(mainframe, textvariable=var1).grid(row=2, column=3)
 b = Button(mainframe, text="Translate", command=translate).grid(
     row=3, column=1, columnspan=3
 )
-speak("Welcome to the translator software")
-speak("Enter the text you want to translate in the text box named Enter text")
-speak("Enter the language you want to translate from in the drop down menu named From language")
-speak("Enter the language you want to translate to in the drop down menu named To language")
+
 
 chiragsinghalwindow.mainloop()
 
