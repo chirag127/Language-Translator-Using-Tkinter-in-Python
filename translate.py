@@ -48,12 +48,7 @@ def screenshot():
 
 def ocr():
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract"
-    # text to be translated
-    text_to_be_translated = pytesseract.image_to_string(
-        screenshot(), lang="chi_tra_vert"
-    )
-
-    return text_to_be_translated
+    return pytesseract.image_to_string(screenshot(), lang="chi_tra_vert")
 
 
 def translate():
